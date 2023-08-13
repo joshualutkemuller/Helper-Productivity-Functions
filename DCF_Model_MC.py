@@ -66,6 +66,10 @@ def main():
     Beta : Sensitivity to market return
     TGR : Terminal Growth Rate
     Risk Free Rate: Risk Free Rate used in CAPM to determine
+    GRMean: Mean Growth Rate used in normal distribution generation
+    GRSTD: Growth rate standard deviation, used with GRMean to produce randomly generated growth rate
+    NumSims: Number of simulations in the MonteCarlo
+    YEARS: Periods we are forecasting with randomly generated growth rate and discounting back to time zero
     """
     #Calling DCF model
     Discount_Cash_Flows, cash_flows, five_year_cagr = DCF(args.FCF,args.YEARS,args.GRMean,args.GRSTD)
